@@ -1,0 +1,21 @@
+# camera params
+image_width: 1920
+image_height: 1200
+camera_name: flir_bfs
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [2184.76791715852, 0.0, 960.427347406132, 0.0, 2183.93706121702, 627.215440996540, 0.0, 0.0, 1.0]
+distortion_model: radtan
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [-0.330618821576414, 0.160723064946346, 0.00134918164717305, -0.000307925595142230, 0.0]
+
+# angular velocity estimation related params
+matches_filter_min_dist: 20.0
+inlier_distance_thres: 0.8    # reprojection error threshold (pixel)
+inlier_ratio_thres: 0.3
+inlier_count_thres: 5
+ransac_max_iter: 100
+filter_threshold: 0.18   # angle of the relative rotation vector

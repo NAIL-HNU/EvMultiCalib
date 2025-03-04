@@ -1,0 +1,4 @@
+num_threads: 1
+downsampling_resolution: 0.2
+max_correspondence_distance: 1.0
+b_motion_compensation: false
