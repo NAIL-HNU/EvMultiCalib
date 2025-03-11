@@ -1,4 +1,3 @@
-#cmake_minimum_required(VERSION 2.8)
 cmake_minimum_required(VERSION 3.15)
 project(evMultiCalib)
 
@@ -59,4 +58,3 @@ add_library(${PROJECT_NAME}_LIB ${HEADERS} ${SOURCES})
 
 add_executable(${PROJECT_NAME} ${SOURCES})
 target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} ${PCL_LIBRARIES} ${CERES_LIBRARIES} ${SMALL_GICP_LIB} yaml-cpp glog::glog)
-#target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} ${PCL_LIBRARIES} ${SMALL_GICP_LIB} yaml-cpp glog::glog)
