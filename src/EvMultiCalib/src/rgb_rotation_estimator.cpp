@@ -201,6 +201,8 @@ namespace rgb_rotation {
                 if (img_msg != nullptr) {
                     cv_bridge::CvImageConstPtr cv_img_ptr = cv_bridge::toCvCopy(
                         img_msg, sensor_msgs::image_encodings::BGR8);
+                    cv::cvtColor(cv_img_ptr->image, cv_img_ptr->image, cv::COLOR_BGR2GRAY);
+
                     cv::Mat image = cv::Mat(pCam_->height_, pCam_->width_, CV_8UC1);
 
                     cv::remap(cv_img_ptr->image, image, pCam_->precomputed_undistorted_x_, pCam_->precomputed_undistorted_y_, cv::INTER_LINEAR);
@@ -266,6 +268,6 @@ namespace rgb_rotation {
             }
         }
         bag.close();
-        LOG(INFO) << "rgb rotation size = " << rgb_rot_.size();
+        LOG(INFO) << "Frame-based camera ego-motion estimation completed. Recovered rotation count = " << rgb_rot_.size();
     }
 } // namespace rgb_rotation

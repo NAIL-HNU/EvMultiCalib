@@ -129,7 +129,7 @@ namespace lidar_rotation {
             }
         }
         bag.close();
-        LOG(INFO) << "lidar rotation size = " << lidar_rot_.size();
+        LOG(INFO) << "LiDAR ego-motion estimation completed. Recovered rotation count = " << lidar_rot_.size();
     }
 
 } // namespace lidar_velocity

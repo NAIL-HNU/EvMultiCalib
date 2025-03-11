@@ -1,14 +1,12 @@
 <launch>
 
-      <arg name="filename" default="24desk1"/>
-
       <node name="evMultiCalib" pkg="evMultiCalib" type="evMultiCalib" output="screen" required="true">
-        <param name="bag_dir" type="string" value="/home/mai/dataset/calib_0108/dataset/$(arg filename)/rotation_syn.bag" />
+        <param name="bag_dir" type="string" value="/home/mai/dataset/calib_0108/dataset/24desk1/rotation_syn.bag" />
         <param name="calib_config_file" type="string" value="$(find evMultiCalib)/config/calib_params.yaml" />
         <param name="event_config_file" type="string" value="$(find evMultiCalib)/config/event_params.yaml" />
         <param name="rgb_config_file" type="string" value="$(find evMultiCalib)/config/rgb_params.yaml" />
         <param name="lidar_config_file" type="string" value="$(find evMultiCalib)/config/lidar_params.yaml" />
-        <param name="result_dir" type="string" value="$(find evMultiCalib)/result" />
+        <param name="result_dir" type="string" value="/home/mai/dataset/calib_0108/dataset" />
       </node>
 
 </launch>

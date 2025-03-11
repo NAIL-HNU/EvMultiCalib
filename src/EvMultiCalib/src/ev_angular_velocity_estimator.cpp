@@ -219,7 +219,7 @@ namespace ev_angular_velocity_estimator
         }
 
         bag.close();
-        LOG(INFO) << "event velocity size = " << est_angvels_.size();
+        LOG(INFO) << "Event camera ego-motion estimation completed. Recovered angular velocity count = " << est_angvels_.size();
     }
 
     void EvAngularVelocityEstimator::processData()
