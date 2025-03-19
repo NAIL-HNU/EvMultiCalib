@@ -1,0 +1,20 @@
+calib_imu: true
+calib_rgb: true
+calib_lidar: true
+
+event_topic: /dvs/events
+imu_topic: /imu/data
+rgb_topic: /camera/image_mono
+lidar_topic: /livox/lidar
+
+# CCA initialization related params
+td_range: 1.0 # time offset range: [-1, 1]
+td_resolution: 1000 # time offset resolution = 1 / 1000 = 0.001
+
+# Nonlinear optimization related params
+event_weight: 1.0
+imu_weight: 0.2
+rgb_weight: 1.0
+lidar_weight: 1.0
+time_offset_bound: 2
+dt_knots: 0.04

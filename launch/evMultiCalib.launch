@@ -1,0 +1,13 @@
+<launch>
+
+      <node name="evMultiCalib" pkg="evMultiCalib" type="evMultiCalib" output="screen" required="true">
+        <param name="bag_dir" type="string" value="/path/to/your/rotation.bag" />
+        <param name="result_dir" type="string" value="/path/to/your/result/dir" />
+
+        <param name="calib_config_file" type="string" value="$(find evMultiCalib)/config/calib_params.yaml" />
+        <param name="event_config_file" type="string" value="$(find evMultiCalib)/config/event_params.yaml" />
+        <param name="rgb_config_file" type="string" value="$(find evMultiCalib)/config/rgb_params.yaml" />
+        <param name="lidar_config_file" type="string" value="$(find evMultiCalib)/config/lidar_params.yaml" />
+      </node>
+
+</launch>

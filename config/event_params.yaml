@@ -1,0 +1,23 @@
+# camera params
+image_width: 346
+image_height: 260
+camera_name: dvs346
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [372.841306971220, 0.0, 174.737926642408, 0.0, 372.689868928857, 121.807730779336, 0.0, 0.0, 1.0]
+distortion_model: radtan
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [-0.344548226953512, 0.171384116599235, 0.000174901256556708, -0.000986661849282164, 0.0]
+
+constant_event_number: 45000 # shapes_rotation 15000
+refractory_period: 0.040
+
+# normal flow related params
+patch_size: 5
+patch_mean_tolerance: 0.050
+plane_tolerance: 0.050
+neighbor_cnt_threshold: 0.60
+terminate_inlier_ratio: 0.60
